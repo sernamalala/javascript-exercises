@@ -7,8 +7,9 @@ const removeFromArray = function (arrayInput, ...elementsInputs) {
             newArray.push(singleElement);
         }
     }
+    return newArray;
 }
-return newArray;
+
 
 console.log(removeFromArray([1, 2, 3, 4], 3))
 // Do not edit below this line
