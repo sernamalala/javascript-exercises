@@ -1,15 +1,15 @@
-const removeFromArray = function (arrayInput, element) {
+const removeFromArray = function (arrayInput, ...elementsInputs) {
 
     let newArray = [];
-    if (arrayInput.includes(element)) {
-        for (const singleElement of arrayInput) {
-            if (singleElement !== element) {
-                newArray.push(singleElement);
-            }
+
+    for (const singleElement of arrayInput) {
+        if (!elementsInputs.includes(singleElement)) {
+            newArray.push(singleElement);
         }
     }
-    return newArray;
-};
+}
+return newArray;
+
 console.log(removeFromArray([1, 2, 3, 4], 3))
 // Do not edit below this line
 module.exports = removeFromArray;
